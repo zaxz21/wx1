@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microwave School</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section02Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+         let section02Event=function(){
+             let $text = $("#elec02-text");
+             setInterval(function() {
+                 $text.addClass("elec02-text-action")
+             }, 300);
+      
+         }
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >Home</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p class="text-active"> Microwave</p><span>|</span>
+                            <ul class="sub sub1-eng">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">What is microwave?</a></li>
+                  
+                                <li class="sub-active" onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>specific features and application</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Microwave Technology</p><span>|</span>
+                            <ul class="sub sub2-eng">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">What is microwave technology?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">Why should we learn?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">History of microwave technology</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>Antenna</p>
+                            <ul class="sub sub3-eng">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">What is antenna?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">Type of antenna</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+
+            <div class="cnt elec-section elec-section02-wrapper">
+                <div class="elec-section02-form" id="elec02-form">
+                  
+                    <div class="elec elec-section02" id="elec02-text">
+                        <h1>specific features and application</h1>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec01.jpg" alt="">
+                            <h3>
+                                No matter where we live, there are many things related to electricity and radio waves. In recent years, with the combination of social and economic activities and informatization, there is an increasing demand for the field of communication and utilization. In particular, wireless communication with radio wave as the medium overcomes the characteristics of time and distance and can transmit information immediately. It has become an important basis of life and production in the information society.
+                            </h3>
+                        </div>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec02.jpg" alt="">
+                            <h3>
+                                The most common communication and utilization of human daily life is the field of broadcasting. Through medium wave, short wave, FM, TV and satellite, we will provide all places, including families and workplaces, with colorful contents such as education, entertainment, music and economy, and enrich our life through voice and video. In addition to communication and broadcasting, communication also plays an important role as a means of information transmission in important public institutions such as national organizations, first aid, fire control, police, prevention and control, and many public welfare groups in the fields of medical treatment, maritime transportation and land transportation.
+                            </h3>
+                        </div>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec03.jpg" alt="">
+                            <h3>
+                                In the medical field, microwave is increasingly used in the treatment of fractures, neuralgia and cancer. In addition, high-frequency heating devices, M / W power transmission and other energy fields, remote sensing, observation and measurement are also using radio waves. Radio waves are used for drying or heating wood, plastics and papermaking processes. They are also used in the fields of integrated traffic information system, speed measurement, radar (tracking, exploration, meteorology, etc.) and radio astronomy. Wireless identification devices, remote control devices, security systems, emergency rescue systems, etc. are also using wireless instruments.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

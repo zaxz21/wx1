@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+.side-nav{
+    cursor: default;
+    height:70px;
+    left:0;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    width:100%;
+    z-index: 10000;
+    display: flex;
+    padding:20px 0;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+}
+.sub-menu{
+    position:relative;
+}
+.start{
+    background-color: #0c1c2e;
+    /* transition: all 0.7s ease-out; */
+}
+.side-nav .nav-form{
+    /* padding-top:30px; */
+    width:90%;
+    position:relative;
+}
+.side-nav .nav-form .lenguage-area.nav-button{
+    display: flex;
+    color:#ffffff;
+    align-items: center;
+}
+.side-nav .nav-form .lenguage-area{
+    display: flex;
+    justify-content: right;
+    position:absolute;
+    right:0;
+}
+.side-nav .nav-form ul li{
+    display: flex;
+    color:#ffffff;
+    cursor: pointer;
+    align-items: center;
+}
+.side-nav .nav-form .nav-button li p{
+    padding:0 15px;
+    align-self: flex-end;
+}
+.side-nav .nav-form ul li p{
+    padding:0 5px;
+
+}
+.side-nav .nav-form ul li p:hover{
+    color:yellow;
+
+}
+.side-nav .text-active{
+    color:yellow;
+}
+.side-nav img{
+    width:219px;
+    height:164px;
+    position:absolute;
+    left:60px;
+    /* margin-left:191px; */
+}
+.side-nav ul li.on a{
+   color: #ffffff;
+}
+ .side-nav .nav-button{
+    display: flex;
+    justify-content: center;
+    font-size:16px;
+
+ }
+ .side-nav .nav-button li{
+    position:relative;
+    padding:20px 0;
+ }
+ .side-nav .nav-button .sub{
+    top:60px;
+    position:absolute;
+    background-color: #ffffff;
+    left:50%;
+    transform: translate(-50%,0);
+    white-space:nowrap;
+    font-weight: 700;
+    width:100%;
+    text-align: center;
+    display: none;
+    border: 1px solid #adadad;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    padding:7px 0px;
+ }
+
+ .side-nav .nav-button .sub li:hover{
+    background-color: #eee;
+    border-radius: 5px;
+ }
+ .side-nav .nav-button .sub1{
+     width:150px;
+ }
+ .side-nav .nav-button .sub2{
+    width:212px;
+}
+.side-nav .nav-button .sub3{
+    width:150px;
+}
+.side-nav .nav-button .sub1-eng{
+    width:250px;
+}
+.side-nav .nav-button .sub2-eng{
+    width:250px;
+}
+.side-nav .nav-button .sub3-eng{
+    width:150px;
+}
+ .side-nav .nav-button .sub li{
+    padding: 10px 5px 10px 15px;
+    font-size:13px;
+ }
+ .side-nav .nav-button .sub li a{
+    
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+
+}

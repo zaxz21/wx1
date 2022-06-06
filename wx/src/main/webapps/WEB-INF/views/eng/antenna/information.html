@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microwave School</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+    
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >Home</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>Microwave</p><span>|</span>
+                            <ul class="sub sub1-eng">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">What is microwave?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>specific features and application</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p >Microwave Technology</p><span>|</span>
+                            <ul class="sub sub2-eng">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">What is microwave technology?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">Why should we learn?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">History of microwave technology</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p class="text-active">Antenna</p>
+                            <ul class="sub sub3-eng">
+                                <li class="sub-active" onclick="window.location.href='../antenna/information.html'"><a href="#">What is antenna?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">Type of antenna</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>What is antenna?</h1>
+                        <img src="../../../../resources/assets/antenna01.png" alt="">
+                        <h3>Antenna is a kind of converter, which transforms the guided wave propagating on the transmission line into electromagnetic wave propagating in unbounded medium (usually free space), or vice versa. In radio equipment, a component used to transmit or receive electromagnetic waves. Engineering systems such as radio communication, broadcasting, television, radar, navigation, electronic countermeasure, remote sensing and radio astronomy rely on antennas to transmit information by electromagnetic waves. In addition, in terms of transmitting energy with electromagnetic waves, non signal energy radiation also requires antennas. General antennas are reversible, that is, the same pair of antennas can be used as both transmitting and receiving antennas. The basic characteristic parameters of the same antenna as transmitting or receiving are the same. This is the reciprocity theorem of antenna.
+                        </h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微波学堂</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+    
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" class="text-active">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >首页</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>微波</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">什么是微波?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>特点和应用</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>微波技术</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">什么是微波技术?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">为什么要学习微波技术？</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">微波技术的发展过程</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p class="text-active">天线</p>
+                            <ul class="sub sub3">
+                                <li class="sub-active" onclick="window.location.href='../antenna/information.html'"><a href="#">什么是天线?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">天线的种类</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>什么是天线?</h1>
+                        <img src="../../../../resources/assets/antenna01.png" alt="">
+                        <h3>天线是一种变换器，它把传输线上传播的导行波，变换成在无界媒体（通常是自由空间）中传播的电磁波，或者进行相反的变换。在无线电设备中用来发射或接受电磁波的部分。无线电通信、广播、电视、雷达、导航、电子对抗、遥感、射电天文等工程系统，凡是利用电磁波来传递信息的，都依靠天线来进行工作。此外，在用电磁波传送能量方面，非信号的能量辐射也需要天线。一般天线都具有可逆性，即同一副天线既可用作发射天线，也可用作接收天线。同一天线作为发射或接收的基本特性参数是相同的。这就是天线的互易定理。</h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

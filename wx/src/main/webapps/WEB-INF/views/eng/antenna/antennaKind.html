@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microwave School</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#antenna-text");
+            setInterval(function() { 
+                $text.addClass("antenna-text-action");
+            }, 500);
+        }
+
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >Home</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>Microwave</p><span>|</span>
+                            <ul class="sub sub1-eng">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">What is microwave?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>specific features and application</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p >Microwave Technology</p><span>|</span>
+                            <ul class="sub sub2-eng">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">What is microwave technology?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">Why should we learn?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">History of microwave technology</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p class="text-active">Antenna</p>
+                            <ul class="sub sub3-eng">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">What is antenna?</a></li>
+                                <li class="sub-active" onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">Type of antenna</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+                <div id="ex1-1" class="modal">
+                    <p class="title">ceiling antenna</p>
+                    <p class="text">Ceiling antennas are generally used in indoor wireless coverage scenes. According to their different radiation forms, they can be divided into directional ceiling antennas and omnidirectional ceiling antennas. Omnidirectional ceiling antennas can be divided into single polarization ceiling and dual polarization ceiling.</p>
+                </div>
+                <div id="ex1-2" class="modal">
+                    <p class="title">Wall mounted antenna</p>
+                    <p class="text">Indoor wall mounted antenna is a typical small plate antenna product, which is mainly used for indoor wireless coverage scenes. According to different polarization modes, it can be divided into single polarization wall mounted antenna and double polarization wall mounted antenna.</p>
+                </div>
+                <div id="ex1-3" class="modal">
+                    <p class="title">Yagi antenna</p>
+                    <p class="text">Yagi antenna is mainly used for link transmission and repeater, with low cost and good front and rear reflectance in two-dimensional plane.</p>
+                </div>
+                <div id="ex1-4" class="modal">
+                    <p class="title">log periodic antenna</p>
+                    <p class="text">Log periodic antenna is similar to Yagi antenna. It is a multi-element bidirectional antenna with broadband coverage. It is mainly used for link relay.</p>
+                </div>
+                <div id="ex1-5" class="modal">
+                    <p class="title">parabolic antenna</p>
+                    <p class="text">Paraboloid antenna is a high gain bidirectional antenna, which is composed of paraboloid reflector and central feed antenna.</p>
+                </div>
+                <div id="ex2-1" class="modal">
+                    <p class="title">omnidirectional base station</p>
+                    <p class="text">Omnidirectional base station antenna is mainly used for 360 degree wide coverage, mainly for covering sparse rural wireless scenes.</p>
+                </div>
+                <div id="ex2-2" class="modal">
+                    <p class="title">directional base station antenna</p>
+                    <p class="text">: Directional base station antenna is the most widely used fully enclosed base station antenna at present. It is divided into many types, mainly including vertical polarization antenna, vertical and horizontal polarization antenna, ± 45 ° dual polarization antenna, multi band antenna, etc. According to the different methods of tilt angle electric adjustment, it can be divided into fixed tilt angle antenna, electric adjustment antenna and three sector cluster antenna.</p>
+                </div>
+                <div id="ex2-3" class="modal">
+                    <p class="title">electric regulation base station antenna</p>
+                    <p class="text">: Electrically tunable antenna refers to changing the phase difference of different radiation units in the array through phase-shifting units, so as to produce different downward inclination states of radiation main lobe. Generally, the downward inclination state of electrically tunable antenna is only within a certain adjustable angle range. The electric down tilt adjustment includes manual adjustment and RCU electric adjustment.</p>
+                </div>
+                <div id="ex2-4" class="modal">
+                    <p class="title">smart antenna</p>
+                    <p class="text">The dual polarization radiation unit is used to form a directional or omnidirectional array, which can scan the beam in 360 degrees or a specific direction; Smart antenna is an antenna array that can determine the spatial information of the signal (such as propagation direction) and the intelligent algorithm of tracking and locating the signal source, and can carry out spatial filtering according to this information.</p>
+                </div>
+                <div id="ex2-5" class="modal">
+                    <p class="title">multimode antenna </p>
+                    <p class="text">Compared with ordinary base station antennas, the main difference of multi-mode base station antenna products lies in the integration of more than two antennas of different frequency bands in a limited space. Therefore, the focus of this product is to eliminate the interaction between different frequency bands (decoupling effect, isolation, near-field interference)</p>
+                </div>
+                <div id="ex2-6" class="modal">
+                    <p class="title">multi beam antenna</p>
+                    <p class="text">Multi beam antenna an antenna that can produce multiple sharp beams. These sharp beams (called meta beams) can be combined into one or more shaped beams to cover a specific airspace. There are three basic forms of multi beam antenna: lens type, reflector type and phased array type.</p>
+                </div>
+                <div id="ex3-1" class="modal">
+                    <p class="title">Indoor coverage beautifying antenna</p>
+                    <p class="text">Beautify different indoor distributed antenna products, which not only solves the problem of indoor signal coverage, but also won't damage the layout of finishing and decoration; Generally, the indoor coverage beautification antenna has beautiful and compact appearance and good stealth effect. It is suitable for high-end residential areas, shopping malls, hotels, office buildings, hospitals and other public places. According to the form of products, indoor coverage beautification antenna can be roughly divided into: ceiling lamp beautification antenna, mural beautification antenna, exhaust fan type and so on.</p>
+                </div>
+                <div id="ex3-2" class="modal">
+                    <p class="title">outdoor coverage and beautification antenna</p>
+                    <p class="text">Outdoor coverage beautifying antenna is mainly aimed at antenna application products such as community and base station. Without increasing the transmission loss, the appearance of the antenna is camouflaged and modified through the application of various materials, structures and patterns. It not only beautifies the urban visual environment, but also reduces the public's fear and resistance to the wireless electromagnetic environment. At the same time, it can prolong the service life of the antenna and ensure the communication quality. According to the form of products, outdoor coverage beautifying antenna can be roughly divided into: street lamp beautifying antenna, signboard beautifying antenna, monitoring ball beautifying antenna, air conditioning beautifying antenna, rockery beautifying antenna, speaker beautifying antenna, simulated tree beautifying antenna, square column beautifying antenna, chameleon beautifying antenna, water tower beautifying antenna, fence beautifying antenna, exhaust pipe beautifying antenna, etc.</p>
+                </div>
+                <div id="ex4-1" class="modal">
+                    <p class="title">RF feed cable</p>
+                    <p class="text">RF feeder cable can be divided into semi flexible coaxial cable and semi-rigid coaxial cable; According to different models, it can be divided into different sizes and models, such as 1 / 4 ", 3 / 8", 1 / 2 ", 5 / 8", 7 / 8 ", 1-1 / 4", 1-5 / 8 ", which are mainly used for indoor and outdoor RF signal transmission. The RF cable inside the mobile communication antenna is also RF feeding cable, which is mainly used for jumper joint feeding, power division network feeding, network impedance matching, etc.
+                        </p>
+                </div>
+                <div id="ex4-2" class="modal">
+                    <p class="title">combiner and splitter</p>
+                    <p class="text">The combiner is mainly used to combine multiple system signals into a set of indoor distribution system. In engineering application, a set of indoor distribution system can work in different communication frequency bands at the same time by using combiner. The combiners used in mobile communication systems generally include two-way combiners, three-way combiners, four-way combiners and so on.</p>
+                </div>
+                <div id="ex4-3" class="modal">
+                    <p class="title">filter</p>
+                    <p class="text">The function of the filter is to allow the signals with partial frequencies to pass smoothly, while the signals with other partial frequencies are greatly suppressed. The filter is generally divided into active filter and passive filter. The cavity filter in the passive filter is generally used in the mobile communication system. Its main characteristics are: wide frequency coverage, high reliability, good stability, input and output impedance matching, easy cascade use, flat in band amplitude frequency characteristics, low insertion loss and high out of band suppression system.</p>
+                </div>
+            <div class="cnt antenna-section antenna-section01-wrapper">
+                <div class="antenna-section01-form" id="antenna-form">
+                    <div class="antenna antenna-section01" id="antenna-text">
+                        <h1>Type of antenna</h1>
+                        <h3>There are many kinds and models of mobile communication antenna products. According to the different application scenarios, it can be roughly divided into indoor distributed antenna products, outdoor base station antenna products and beautifying antenna products.
+                        </h3>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">Indoor distributed and cell coverage antenna products</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex1-1" rel="modal:open"><img src="../../../../resources/assets/1.1.png" alt=""/></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-2" rel="modal:open"><img src="../../../../resources/assets/1.2.png" alt=""/></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-3" rel="modal:open"><img src="../../../../resources/assets/1.3.png" alt=""/></a>
+
+                            </p>
+                        </div>
+                       <div class="section">
+                            <p>
+                                <a a href="#ex1-4" rel="modal:open"><img src="../../../../resources/assets/1.4.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-5" rel="modal:open"><img src="../../../../resources/assets/1.5.png" alt=""></a>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">Outdoor base station antenna products</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex2-1" rel="modal:open"><img src="../../../../resources/assets/2.1.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-2" rel="modal:open"><img src="../../../../resources/assets/2.2.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-3" rel="modal:open"><img src="../../../../resources/assets/2.3.png" alt=""></a>
+                            </p>
+                        </div>
+                       <div class="section">
+                            <p>
+                                <a a href="#ex2-4" rel="modal:open"><img src="../../../../resources/assets/2.4.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-5" rel="modal:open"><img src="../../../../resources/assets/2.5.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-6" rel="modal:open"><img src="../../../../resources/assets/2.6.png" alt=""></a>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">Beautify antenna</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex3-1" rel="modal:open"><img src="../../../../resources/assets/3.1.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex3-2" rel="modal:open"><img src="../../../../resources/assets/3.2.png" alt=""></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">Passive components of mobile communication feeder and others</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex4-1" rel="modal:open"><img src="../../../../resources/assets/4.1.jpg" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex4-2" rel="modal:open"><img src="../../../../resources/assets/4.2.jpg" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex4-3" rel="modal:open"><img src="../../../../resources/assets/4.3.jpg" alt=""></a>
+                            </p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microwave School</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+    
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >Home</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p class="text-active"> Microwave</p><span>|</span>
+                            <ul class="sub sub1-eng">
+                                <li class="sub-active" onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">What is microwave?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>specific features and application</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Microwave Technology</p><span>|</span>
+                            <ul class="sub sub2-eng">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">What is microwave technology?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">Why should we learn?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">History of microwave technology</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>Antenna</p>
+                            <ul class="sub sub3-eng">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">What is antenna?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">Type of antenna</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>What is microwave?</h1>
+                        <img src="../../../../resources/assets/elec-waves-background.jpg" alt="">
+                        <h3>Let the frequency of single frequency electromagnetic wave be f and the period be t. the propagation speed of electromagnetic wave in vacuum is equal to the speed of light C = 3 × 10 ^ 8 m / s, then the corresponding wavelength in free space is λ= cT=c/f （0 – 1 – 1） Generally, the electromagnetic wave with frequency of 300MHz ~ 3000ghz is called microwave. According to formula (0 – 1 – 1), the corresponding free space wavelength is 1m ~ 0.1mm. Microwave has high frequency and short wavelength, so it is called microwave. The "micro" of microwave is in terms of its wavelength. On the other hand, "micro" of microwave is a relative concept, which mainly refers to that the wavelength of microwave is "micro" relative to the size of human body, conventional circuit and general obstacles in nature. Microwave is also an electromagnetic wave, so the knowledge about electromagnetic wave learned in the course of "electromagnetic field theory" is also applicable to microwave. "Microwave technology" course will continue to learn about electromagnetic waves on the basis of "electromagnetic field theory". Microwave band can be divided into decimeter wave, centimeter wave, millimeter wave and submillimeter wave. The corresponding frequency range and symbols are shown in table 0-1. The microwave frequency band is between meter wave (also known as ultrashort wave or VHF wave) and far-infrared wave.
+                        </h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

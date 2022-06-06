@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전자파 학습소</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        let $nav = null,
+            $cnt = null,
+            debouncedOnWheel =null
+            moveCnt = null,
+            moveIndex = 0,
+            moveCntTop = 0,
+            time = false; 
+          
+    
+        $(document).ready(function(){
+            init();
+            section01Event();
+            history.scrollRestoration = "manual";
+
+            initEvent();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $cnt = $(".content");
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+        };
+        let navRemove = function(){
+            let $start = $("#side-nav");
+            $start.removeClass("start");
+        };
+        let initEvent = function(){
+            $("html ,body").scrollTop(16);
+            $cnt.on("mousewheel", function(e){
+                if(time === false){
+                   wheel(e)
+                }
+            });        
+        };
+        let wheel = function(e){
+            let eo= e.originalEvent;
+            console.log(eo.wheelDelta)
+            if(eo.wheelDelta < 0){
+                if(moveIndex < 2){
+                    moveIndex += 1;
+                    moving(moveIndex)
+                };
+            }else{
+                if(moveIndex > 0){
+                    moveIndex -= 1;
+                    moving(moveIndex)
+                };
+            };
+        };
+        let moving = function(index){
+            time = true // 
+            moveCnt = $cnt.children("div").eq(index);
+            moveCntTop = moveCnt.offset().top;
+            $("html ,body").stop().animate({
+                scrollTop: moveCntTop
+            }, 500, function(){
+              time = false; 
+            });
+            
+            if(index > 0){
+                navEvent();
+            }
+            if(index === 0){
+                navRemove();
+            }
+            if(index === 1){
+                section03Event()
+            }
+            if(index === 2){
+                section04Event()
+            }
+       
+        };
+    };
+        let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $title = $("#title-area");
+            let $subTitle=$("#sub-title-area")
+
+            setInterval(function() { 
+
+                $title.addClass("title-action");
+
+            }, 500);
+            setInterval(function() { 
+
+                $subTitle.addClass("sub-title-active");
+            }, 2500);
+
+        }
+        
+        let section02Event=function(){
+            let $form = $("#section02-form");
+            let $text = $("#text-area");
+            setInterval(function() { 
+
+                $form.addClass("section02-form-action");
+
+            }, 300);
+            setInterval(function() { 
+
+                $text.addClass("text-area-action");
+
+            }, 1000);
+            
+        }
+        let section03Event=function(){
+
+            let $info = $("#section03-info");
+            setInterval(function() { 
+                $info.addClass("info-action");
+            }, 1000);
+            
+        }
+        let section04Event=function(){
+            let $coment = $("#coment");
+            let $info = $("#section04-info");
+            let $name = $("#section04-name");
+            setInterval(function() { 
+                $name.addClass("name-action");
+
+            }, 500);
+            setInterval(function() { 
+
+                $coment.addClass("coment-action");
+
+            }, 1000);
+            setInterval(function() { 
+
+                $info.addClass("info-action");
+
+            }, 1000);
+        }
+    
+        function throttle(fn, wait) {
+            let timer = Date.now();
+            return function() {
+            if ((timer + wait - Date.now()) < 0) {
+                fn();
+                timer = Date.now();
+                }
+            }
+            conosle.log("how")
+        }
+        scroll()
+
+       
+</script>
+    <body>
+        <div class="side-nav" id ='side-nav'>
+            <img src="../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='./main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p class="text-active">홈</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p> 전자파</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`./electromagneticWaves/information.html`"><a href="./electromagneticWaves/information.html">전자파란?</a></li>
+                  
+                                <li onclick="window.location.href=`./electromagneticWaves/characteristic.html`"><a href="./electromagneticWaves/characteristic.html">특성과 응용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>전자파기술</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='./electromagneticSkill/information.html'"><a href="#">전자파기술이란?</a></li>
+                  
+                                    <li onclick="window.location.href='./electromagneticSkill/why.html'"><a href="#">왜 공부해야 할까?</a></li>
+                  
+                                    <li onclick="window.location.href='./electromagneticSkill/history.html'"><a href="#">전자파기술의 발전과정</a></li>
+                  
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>안테나</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='./antenna/information.html'"><a href="#">안테나란?</a></li>
+                                <li onclick="window.location.href='./antenna/antennaKind.html'"><a href="#">안테나의 종류</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="content">
+            <div class="cnt logo">
+                    <div class="title-area" id="title-area">
+                        <img src="../../../resources/assets/hometext.png" alt="">
+                    </div>
+                    <div class="sub-title-area" id ="sub-title-area">
+                        <h2>if you believe you can do it, you will.</h2>
+                    </div>
+            </div> 
+            <!-- <div class="cnt section02">
+                <div class="section02-form" id="section02-form">
+                    <div class="text-area" id="text-area">
+                        <div class="icon">''</div>
+                        <h1 class="title">홈페이지의 목적</h1>
+                        <h2 class="text" >
+                            <span>이 홈페이지는 북경항공항천대학의 16학번 남현우에의해 만들어졌으며,</span>
+                            <span>2022년 졸업논문을 위한 홈페이지입니다.</span>
+                            <span>아울러 이 홈페이지가 전자파기술을 배우는 학생들에게 도움이 되었으면 하는 바램입니다.</span>
+                            <span> 많은 내용들은 저의 지도교수이신 전소휘교수님께서 쓰신</span>
+                            <span class="yello">‘전자파기술기초’ 의 내용을 담았습니다. </span>
+                        </h2>
+                    </div>
+                </div>
+            </div> -->
+            <div class="cnt profile section03">
+                <div class="profile-area">
+                    <div class="my-profile">
+                        <div class="border-area"></div>
+                        <img src="../../../resources/assets/me.jpeg" alt="">
+                        <div class="info" id="section03-info">
+                            <ul>
+                                <li class="title">· 이름 :</li>
+                                <li>남현우</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 출생년도 :</li>
+                                <li>1997년 10월 18일</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 소속 :</li>
+                                <li>북경항공항천대학</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 전공 :</li>
+                                <li>전자정보공학</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 이메일 :</li>
+                                <li>zaxz1729@gmail.com</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 전화번호 :</li>
+                                <li>10 8929 1729 (한)<br/>131 2170 8199 (중)</li>
+                            </ul>
+                            <h2 class="text" >
+                                <span>이 홈페이지는 북경항공항천대학의 16학번 남현우에의해 만들어졌으며,2022년 졸업논문을 위한 홈페이지입니다.아울러 이 홈페이지가 전자파기술을 배우는 학생들에게 도움이 되었으면 하는 바램입니다. 많은 내용들은 저의 지도교수이신 전소휘교수님께서 쓰신 ‘전자파기술기초’ 의 내용을 담았습니다.</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+            <div class="cnt professor">
+                <div class="my-profile">
+                    <div class="professor-form">
+                        <div>
+                            <div class="name" id="section04-name">전소휘(全绍辉) 교수</div>    
+                        <!-- <div class="coment" id="coment">
+                            If you believe you can do it, you will.
+                        </div> -->
+                            <div class="info" id="section04-info">
+                                <ul>
+                                    <li class="title">[소속]</li>
+                                    <li>북경항공항천대학 전자정보공학학원</li>
+                                </ul>
+                                <ul>
+                                    <li class="title">[연구방향 및 성과]</li>
+                                    <li>오랫동안 마이크로파기술,<br/> 현대통신안테나, 전자기장이론의 수업을 주로 해오셨으며,<br/> 전자파학습소 웹페이지를 만드셨습니다.<br/> 국내와 국외로 총 30편의 논문을 발표하셨으며,<br/> 국방과학기술대회1등, 군인과학기술3등을 하셨습니다.</li>
+                                </ul>
+                                <ul>
+                                    <li class="title">[이메일]</li>
+                                    <li>quanshao@buaa.edu.cn</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전자파 학습소</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section02Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+         let section02Event=function(){
+             let $text = $("#elec02-text");
+             setInterval(function() {
+                 $text.addClass("elec02-text-action")
+             }, 300);
+      
+         }
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'">홈</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p class="text-active"> 전자파</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">전자파란?</a></li>
+                  
+                                <li class="sub-active"><a >특성과 응용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>전자파기술</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">전자파기술이란?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">왜 공부해야 할까?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">전자파기술의 발전과정</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>안테나</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">안테나란?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">안테나의 종류</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+
+            <div class="cnt elec-section elec-section02-wrapper">
+                <div class="elec-section02-form" id="elec02-form">
+                  
+                    <div class="elec elec-section02" id="elec02-text">
+                        <h1>특성과 응용</h1>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec01.jpg" alt="">
+                            <h3>
+                                우리가 살고 있는 주변 어디를 보나 전기와 전파에 관계되는 것이 많이 있다. 최근 들어 사회 · 경제활동이 정보화와 결합되면서 전파 이용 분야에 대한 수요가 매우 많아지고 있다. 특히 전파를 매체로 하는 무선통신은 시간과 거리를 극복하면서 즉시 정보를 전달할 수 있는 특성으로 인해 정보사회에서는 중요한 생활과 생산기반으로 되어가고 있다.
+                            </h3>
+                        </div>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec02.jpg" alt="">
+                            <h3>
+                                인간의 일상생활을 위한 가장 일반적인 전파이용은 방송 분야입니다. 중파, 단파, FM, TV, 위성을 통해 가정, 직장을 비롯한 모든 장소에 교양, 오락, 음악, 경제 등에 관한 다채로운 내용을 음성과 영상으로 제공함으로써 우리 생활을 윤택하게 해준다. 통신, 방송 이외에도 사회적으로 중요한 국가조직, 구급, 소방, 경찰, 방제 등의 공공기관과 의료, 해상교통, 육상 운송분야의 많은 공익단체에서도 전파가 정보 전달수단으로서 중요한 역할을 하고 있다.
+                            </h3>
+                        </div>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec03.jpg" alt="">
+                            <h3>
+                                의료분야에서도 골절, 신경통, 암 등의 치료에 전자파 이용이 증가하고 있다. 또한 고주파 가열장치, M/W 전력전송 등의 에너지분야, 원격 탐사, 관측, 계측 등에서도 전파가 이용되고 있다. 목재나 비닐, 종이 제조 공정의 건조나 가열에도 전파가 이용되고 있고, 종합 교통정보 시스템, 속도 측정, 레이다(추적, 탐색, 기상 등), 전파천문학 분야에도 쓰이고 있다. 무선식별 장치, 원격 제어 장치, 안전 시스템, 응급 구조 시스템 등에도 무선기기가 유용하게 활용되고 있다.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

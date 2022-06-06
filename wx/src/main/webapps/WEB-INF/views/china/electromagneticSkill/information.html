@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微波学堂</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+    
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" class="text-active">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >首页</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>微波</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">什么是微波?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>特点和应用</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="text-active">微波技术</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li class="sub-active" onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">什么是微波技术?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">为什么要学习微波技术？</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">微波技术的发展过程</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>天线</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">什么是天线?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">天线的种类</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>什么是微波技术？</h1>
+                        <img src="../../../../resources/assets/skill01-background.jpg" alt="">
+                        <h3>微波技术的范围很广，其含义可以分为广义和狭义两种。
+                            广义的微波技术可以包括微波的产生、传输、变换（包括放大和调制）、发射、接收、测量等。
+                            狭义的微波技术主要研究微波的传输方面的问题，包括一些常用的微波传输线和微波无源元件。这些内容一般作为电子信息工程、通信工程、电磁场与无线技术等专业的本科阶段微波技术课所要讲述的内容，是研究其他微波技术问题和基础。
+                        </h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

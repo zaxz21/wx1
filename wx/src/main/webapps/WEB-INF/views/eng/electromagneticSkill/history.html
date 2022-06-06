@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Microwave School</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            sliderEvent();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+        let sliderEvent=function(){
+            let $text = $("#slider");
+            setInterval(function() { 
+                $text.addClass("slider-action");
+            }, 1000);
+        }
+    scroll();
+</script>
+<script>
+    $(function(){
+      $('.slider').slick({
+        slide: 'div',   //슬라이드 되어야 할 태그 ex) div, li
+        infinite : false,  //무한 반복 옵션  
+        slidesToShow : 1,   // 한 화면에 보여질 컨텐츠 개수
+        slidesToScroll : 1,   //스크롤 한번에 움직일 컨텐츠 개수
+        speed : 100,   // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+        arrows : false,    // 옆으로 이동하는 화살표 표시 여부
+        dots : true,    // 스크롤바 아래 점으로 페이지네이션 여부
+        autoplay : false,      // 자동 스크롤 사용 여부
+        autoplaySpeed : 10000,    // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+        pauseOnHover : true,    // 슬라이드 이동  시 마우스 호버하면 슬라이더 멈추게 설정
+        vertical : false,   // 세로 방향 슬라이드 옵션
+        dotsClass : "slick-dots",   //아래 나오는 페이지네이션(점) css class 지정
+        draggable : true,   //드래그 가능 여부  
+      });
+    })
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >Home</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>Microwave</p><span>|</span>
+                            <ul class="sub sub1-eng">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">What is microwave?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>specific features and application</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="text-active">Microwave Technology</p><span>|</span>
+                            <ul class="sub sub2-eng">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">What is microwave technology?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">Why should we learn?</a></li>
+                  
+                                    <li class="sub-active" onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">History of microwave technology</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>Antenna</p>
+                            <ul class="sub sub3-eng">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">What is antenna?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">Type of antenna</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>History of microwave technology</h1>
+                        <h3>The history of microwave technology can be traced back to the beginning of the 20th century and even the end of the 19th century. In the Second World War, the development of radar accelerated the development of microwave technology, which is called an independent discipline. The development of microwave technology has experienced several important stages.
+                        </h3>
+                    </div>
+                </div>
+                <div class="slider" id="slider">
+                    <div class="slider-info-form">
+                        <img src="../../../../resources/assets/skill-profile01.jpg" alt="">
+                        <div class="slider-text-area">
+                            <span class="slider-title">The first stage: before 1940.</span>
+                            <h3 class="slider-text">In 1888, German physicist Hertz verified the existence of electromagnetic waves through experiments. This is usually regarded as the sign of the complete establishment of the theoretical system of macro electromagnetic field.
+                                    In 1936, researchers at Bell Institute in the United States proved through experiments that hollow metal tubes can transmit microwave power. This can be regarded as a sign of the emergence of modern microwave technology.
+                                    @At this stage, scientists invented several forms of microwave tubes, which is the decisive factor to promote the development of microwave technology. At this stage, the theoretical research on the interaction between electromagnetic field and moving charge in waveguide, cavity resonator and microwave electron tube has also been carried out, which has laid a theoretical foundation for the further development of microwave technology.
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="slider-info-form">
+                        <img src="../../../../resources/assets/skill-profile02.jpg" alt="">
+                        <div class="slider-text-area">
+                            <span class="slider-title">The second stage: 1940 ~ 1945.</span>
+                            <h3 class="slider-text">This stage is in the period of World War II, and the focus of research is to apply radar to military affairs. In the United States, the Massachusetts Institute of Technology (MIT) has established a famous radiation laboratory to develop the theory and technology of radar. Many famous scientists work together to promote the research in the field of microwave to a period of rapid development
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="slider-info-form">
+                        <div class="slider-text-area">
+                            <span class="slider-title">The third stage: after about 1945.</span>
+                            <h3 class="slider-text">At this stage, a complete set of microwave electronics theory is established on the basis of solid line. In addition to continuing to open up new bands and expand the scope of application, a series of new marginal scientific fields have also been formed, among which, in particular, it is necessary to point out
+                            </h3>
+                            <h3 class="slider-text">
+                                ① From 1944 to now, microwave pop and quantum science have made great progress.
+                                ② From 1946 to 1971, radio astronomy developed greatly.
+                                ③ Since 1947, the utilization of microwave energy and the development of microwave medicine.
+                                ④ In 1964, INTELSAT was established.
+                                ⑤ Since 1965, microwave circuits have always been solid and miniaturized.
+                            </h3>
+                        </div>
+                        <div class="slider-text-area">
+                            <span class="slider-title">Now?</span>
+                            <h3 class="slider-text">
+                                1. Transition to higher frequency and shorter wavelength, that is, to millimeter wave and submillimeter wave, so as to make up for the blank of centimeter wave band and laser wave band.
+                                2. Want to develop in the direction of miniaturization and monolithic integration of microwave circuits, as well as the wider application of MMIC.
+                                3. Want to open up more and updated microblog application fields.
+                                
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

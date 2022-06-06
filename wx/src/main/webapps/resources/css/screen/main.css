@@ -1,0 +1,177 @@
+
+/* .header{
+    position:fixed;
+    height:50px; 
+    margin-left:276px;
+    width:100%;
+    top:0;
+    z-index: 10000;
+    background-color: #312450;
+} */
+
+
+
+.content{
+    overflow: hidden;
+}
+.content div p{
+    margin-left: 208px;
+}
+.content .cnt .sub-title-area{
+    width:0px;
+    overflow: hidden;
+}
+.content .cnt .sub-title-active{
+    width:62%;
+    overflow: hidden;
+    transition: width 1s ease;
+}
+.content .cnt .sub-title-area h2{
+    color:#ffffff;
+    margin-left: 73px;
+    font-size: 29px;
+    min-width:630px;
+
+}
+.content .cnt{
+    height:100vh;
+}
+.content .cnt{
+    background-color:#ebebeb;
+
+}
+.content .logo{
+    background-image: url("../../assets/home-background.jpg") ;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content .logo .title-area{
+    overflow: hidden;
+    margin-top: 13rem;
+    margin-left: 72px;
+    opacity: 0;
+}
+.content .logo .title-action{
+    opacity: 1;
+    transition: all 6s;
+}
+.content .logo .title-area img{
+    width:42rem;
+    height:15rem;
+}
+.content .profile{
+  
+}
+.content .profile img{
+    width:300px;
+    z-index: 1;
+}
+.content .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content .profile .profile-area{
+    margin-top:50px;
+    padding:0 14rem;
+}
+.content .profile .profile-area .my-profile{
+    display: flex;
+    align-items: center;
+    position:relative
+}
+.content .profile .profile-area .my-profile .border-area{
+    width: 300px;
+    top: 20px;
+    left: -91px;
+    height: 375px;
+    position: absolute;
+    border: 32px solid #3c2c62;
+}
+.content .profile .profile-area .my-profile .info{
+    margin-left:12rem;
+    font-size:15px;
+    line-height: 19px;
+    overflow: hidden;
+    height:0px;
+}
+.content .profile .profile-area .my-profile .info-action{
+    height:378px;
+    transition: all 0.7s ease-out;
+ }
+.content .profile .profile-area .my-profile .info ul{
+    display: flex;
+}
+.content .profile .profile-area .my-profile .info ul li:nth-child(2){
+
+}
+.content .profile .profile-area .my-profile .info .text{
+    font-size:15px;
+    font-weight: normal;
+    max-width: 413px;
+}
+
+.content .professor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .professor .my-profile .coment{
+    color:#A9F5A9;
+    font-size:30px;
+    text-align: center;
+    overflow: hidden;
+    height:0;
+    transition: all 0.7s ease-out;
+    text-align: center;
+}
+.content .professor .my-profile {
+    margin-top:220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .professor .my-profile .professor-form{
+    height:100%;
+    margin-top: 50px;
+    max-width: 1200px;
+}
+.content .professor .my-profile .coment-action{
+    transition: all 0.7s ease-out;
+    height:116px;
+}
+.content .professor .my-profile .name{
+    font-size:27px;
+    color:#333333;
+    text-align: center;
+    opacity: 0;
+}
+.content .professor .my-profile .name-action{
+    transition: all 0.7s ease-out;
+    opacity: 1;
+}
+.content .professor .my-profile .info{
+    color:#333333;
+    font-size:17px;
+    height:0px;
+    overflow: hidden;
+}
+.content .professor .my-profile .info-action{
+
+    transition: all 0.7s ease-out;
+    height:660px;
+    text-align: center;
+}
+.content .professor .my-profile .info .title{
+    font-weight: bold;
+    font-size:17px;
+    color:#333333;
+    text-align: center;
+
+}
+
+.yello{
+    color:yellow;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微波学堂</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        let $nav = null,
+            $cnt = null,
+            debouncedOnWheel =null
+            moveCnt = null,
+            moveIndex = 0,
+            moveCntTop = 0,
+            time = false; 
+          
+    
+        $(document).ready(function(){
+            init();
+            section01Event();
+            history.scrollRestoration = "manual";
+
+            initEvent();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $cnt = $(".content");
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+        };
+        let navRemove = function(){
+            let $start = $("#side-nav");
+            $start.removeClass("start");
+        };
+        let initEvent = function(){
+            $("html ,body").scrollTop(16);
+            $cnt.on("mousewheel", function(e){
+                if(time === false){
+                   wheel(e)
+                }
+            });        
+        };
+        let wheel = function(e){
+            let eo= e.originalEvent;
+            console.log(eo.wheelDelta)
+            if(eo.wheelDelta < 0){
+                if(moveIndex < 2){
+                    moveIndex += 1;
+                    moving(moveIndex)
+                };
+            }else{
+                if(moveIndex > 0){
+                    moveIndex -= 1;
+                    moving(moveIndex)
+                };
+            };
+        };
+        let moving = function(index){
+            time = true // 
+            moveCnt = $cnt.children("div").eq(index);
+            moveCntTop = moveCnt.offset().top;
+            $("html ,body").stop().animate({
+                scrollTop: moveCntTop
+            }, 500, function(){
+              time = false; 
+            });
+            
+            if(index > 0){
+                navEvent();
+            }
+            if(index === 0){
+                navRemove();
+            }
+            if(index === 1){
+                section03Event()
+            }
+            if(index === 2){
+                section04Event()
+            }
+       
+        };
+    };
+        let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $title = $("#title-area");
+            let $subTitle=$("#sub-title-area")
+
+            setInterval(function() { 
+
+                $title.addClass("title-action");
+
+            }, 500);
+            setInterval(function() { 
+
+                $subTitle.addClass("sub-title-active");
+            }, 2500);
+
+        }
+        
+        let section02Event=function(){
+            let $form = $("#section02-form");
+            let $text = $("#text-area");
+            setInterval(function() { 
+
+                $form.addClass("section02-form-action");
+
+            }, 300);
+            setInterval(function() { 
+
+                $text.addClass("text-area-action");
+
+            }, 1000);
+            
+        }
+        let section03Event=function(){
+
+            let $info = $("#section03-info");
+            setInterval(function() { 
+                $info.addClass("info-action");
+            }, 1000);
+            
+        }
+        let section04Event=function(){
+            let $coment = $("#coment");
+            let $info = $("#section04-info");
+            let $name = $("#section04-name");
+            setInterval(function() { 
+                $name.addClass("name-action");
+
+            }, 500);
+            setInterval(function() { 
+
+                $coment.addClass("coment-action");
+
+            }, 1000);
+            setInterval(function() { 
+
+                $info.addClass("info-action");
+
+            }, 1000);
+        }
+    
+        function throttle(fn, wait) {
+            let timer = Date.now();
+            return function() {
+            if ((timer + wait - Date.now()) < 0) {
+                fn();
+                timer = Date.now();
+                }
+            }
+            conosle.log("how")
+        }
+        scroll()
+
+       
+</script>
+    <body>
+        <div class="side-nav" id ='side-nav'>
+            <img src="../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p class="text-active" onclick="window.location.href='./main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p  onclick="window.location.href='../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p class="text-active">首页</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>微波</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`./electromagneticWaves/information.html`"><a href="./electromagneticWaves/information.html">什么是微波？</a></li>
+                  
+                                <li onclick="window.location.href=`./electromagneticWaves/characteristic.html`"><a href="./electromagneticWaves/characteristic.html">特点和应用</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>微波技术</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='./electromagneticSkill/information.html'"><a href="#">什么是微波技术?</a></li>
+                  
+                                    <li onclick="window.location.href='./electromagneticSkill/why.html'"><a href="#">为什么要学习微波技术？</a></li>
+                  
+                                    <li onclick="window.location.href='./electromagneticSkill/history.html'"><a href="#">微波技术的发展过程</a></li>
+                  
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>天线</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='./antenna/information.html'"><a href="#">什么是天线？</a></li>
+                                <li onclick="window.location.href='./antenna/antennaKind.html'"><a href="#">天线的种类</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="content">
+            <div class="cnt logo">
+                    <div class="title-area" id="title-area">
+                        <img src="../../../resources/assets/hometext.png" alt="">
+                    </div>
+                    <div class="sub-title-area" id ="sub-title-area">
+                        <h2>if you believe you can do it, you will.</h2>
+                    </div>
+            </div> 
+            <div class="cnt profile section03">
+                <div class="profile-area">
+                    <div class="my-profile">
+                        <div class="border-area"></div>
+                        <img src="../../../resources/assets/me.jpeg" alt="">
+                        <div class="info" id="section03-info">
+                            <ul>
+                                <li class="title">· 姓名 :</li>
+                                <li>南现玗</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 出生 :</li>
+                                <li>1997年10月18日</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 所属 :</li>
+                                <li>北京航空航天大学</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 专业 :</li>
+                                <li>电子信息工程</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 电子邮箱 :</li>
+                                <li>zaxz1729@gmail.com</li>
+                            </ul>
+                            <ul>
+                                <li class="title">· 电话 :</li>
+                                <li>010 8929 1729（韩）<br/>131 2170 8199（中）</li>
+                            </ul>
+                            <h2 class="text" >
+                                <span>该网站由北京航空航天大学18级学生南现玗创建，是为22年毕设准备的网站。希望该网站对学习微波技术的学生有所帮助。网站的很多内容都包含了我的指导教授全绍辉老师写的“微波技术基础”的内容.</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+            <div class="cnt professor">
+                <div class="my-profile">
+                    <div class="professor-form">
+                        <div>
+                            <div class="name" id="section04-name">全绍辉 教授</div>    
+                        <!-- <div class="coment" id="coment">
+                            If you believe you can do it, you will.
+                        </div> -->
+                            <div class="info" id="section04-info">
+                                <ul>
+                                    <li class="title">[所属]</li>
+                                    <li>北京航空航天大学 电子信息工程学院</li>
+                                </ul>
+                                <ul>
+                                    <li class="title">[教学方面]</li>
+                                    <li>长期主讲“微波技术”、、“现代通信天线”、“高等电磁场理论”等课程，主持创建微波学堂系列网站。主编和参编教材6本，在国内外知名学术期刊和会议上发表教学论文10余篇，获得校级及校级以上教学奖10余项。主持国家级和省部级基金项目多项，作为主要成员多次参加大型紧缩场工程项目，在国内外知名学术期刊和会议上发表科研论文30余篇，获国防科技进步一等奖1次、军队科技三等奖1次。</li>
+                                </ul>
+                                <ul>
+                                    <li class="title">[联系方式]</li>
+                                    <li>quanshao@buaa.edu.cn</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

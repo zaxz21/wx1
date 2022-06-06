@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전자파 학습소</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            sliderEvent();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+        let sliderEvent=function(){
+            let $text = $("#slider");
+            setInterval(function() { 
+                $text.addClass("slider-action");
+            }, 1000);
+        }
+    scroll();
+</script>
+<script>
+    $(function(){
+      $('.slider').slick({
+        slide: 'div',   //슬라이드 되어야 할 태그 ex) div, li
+        infinite : false,  //무한 반복 옵션  
+        slidesToShow : 1,   // 한 화면에 보여질 컨텐츠 개수
+        slidesToScroll : 1,   //스크롤 한번에 움직일 컨텐츠 개수
+        speed : 100,   // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+        arrows : false,    // 옆으로 이동하는 화살표 표시 여부
+        dots : true,    // 스크롤바 아래 점으로 페이지네이션 여부
+        autoplay : false,      // 자동 스크롤 사용 여부
+        autoplaySpeed : 10000,    // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+        pauseOnHover : true,    // 슬라이드 이동  시 마우스 호버하면 슬라이더 멈추게 설정
+        vertical : false,   // 세로 방향 슬라이드 옵션
+        dotsClass : "slick-dots",   //아래 나오는 페이지네이션(점) css class 지정
+        draggable : true,   //드래그 가능 여부  
+      });
+    })
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >홈</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p> 전자파</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">전자파란?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>특성과 응용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p  class="text-active">전자파기술</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">전자파기술이란?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">왜 공부해야 할까?</a></li>
+                  
+                                    <li class="sub-active" onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">전자파기술의 발전과정</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>안테나</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">안테나란?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">안테나의 종류</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>전자파기술의 발전과정</h1>
+                        <h3>전자파 기술이 발전한 역사는 20세기 초, 더 나아가서는 19세기 말까지 거슬러 올라갈 수 있다.제2차 세계대전에서 레이더의 연구와 제작은 마이크로파 기술의 발전을 가속화시켰고 이것은 독립된 학과라고 불린다.전자파 기술의 발전은 몇 가지 중요한 단계를 거쳤다.
+                        </h3>
+                    </div>
+                </div>
+                <div class="slider" id="slider">
+                    <div class="slider-info-form">
+                        <img src="../../../../resources/assets/skill-profile01.jpg" alt="">
+                        <div class="slider-text-area">
+                            <span class="slider-title">1단계: 1940년 전.</span>
+                            <h3 class="slider-text">1888년에 독일의 물리학자 헤르츠는 실험을 통해 전자파의 존재를 검증했다.이것은 통상적으로 거시적 전자장 이론 체계가 완비되어 세워진 상징으로 여겨진다.1936년에 미국 베어연구소의 연구원들은 실험을 통해 공심금속관이 마이크로파 출력을 전송할 수 있다는 것을 증명했다.이것은 근대 마이크로파 기술이 발생한 상징으로 볼 수 있다.# 이 단계에서 과학자들은 몇 가지 형식의 마이크로파 전자관을 발명했는데 마이크로파 기술의 발전을 추진하는 결정적인 요소이다.이 단계에서 파도전도, 공강공진기, 마이크로전자관에서 전자장과 운동전하의 상호작용 등에 대한 이론적 연구를 전개하여 마이크로파 기술의 진일보한 발전에 이론적 기반을 다졌다.
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="slider-info-form">
+                        <img src="../../../../resources/assets/skill-profile02.jpg" alt="">
+                        <div class="slider-text-area">
+                            <span class="slider-title">2단계: 1940년~1945년.</span>
+                            <h3 class="slider-text">이 단계는 제2차 세계대전 시기로 레이더를 군사에 응용하는 데 초점이 맞춰져 있다.미국의 MIT공과대학은 유명한 방사능 실험실을 설립하여 레이더의 이론과 기술을 발전시켰다. 많은 유명한 과학자들이 함께 마이크로파 분야의 연구를 급속한 발전 시기로 추진했다.
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="slider-info-form">
+                        <div class="slider-text-area">
+                            <span class="slider-title">3단계: 약 1945년 이후.</span>
+                            <h3 class="slider-text">이 단계는 단계의 실선을 바탕으로 비교적 완전하게 전자학 이론을 세웠다.계속해서 새로운 파단을 개척하고 응용 범위를 확대하는 동시에 일련의 새로운 변두리 과학 분야를 형성했다.  그 중에서 특히 주목해야 할 것은 다음과 같다.
+                            </h3>
+                            <h3 class="slider-text">
+                                ① 1944년부터 지금까지 마이크로파포학과 양자학의 대발전.
+                                ② 1946~1971년에 방전천문학의 대발전
+                                ③ 1947년부터 지금까지 마이크로웨이브 이용 및 마이크로웨이브 의학의 발전.
+                                ④ 1964년에 국제 통신 위성 기구를 설립했다.
+                                ⑤ 1965년 이후 마이크로파 회로는 줄곧 고체화되고 소형화되어 발전해 왔다.
+                            </h3>
+                        </div>
+                        <div class="slider-text-area">
+                            <span class="slider-title">현재</span>
+                            <h3 class="slider-text">
+                                1.   더 높은 주파수와 더 짧은 파장으로 과도, 즉 밀리미터파와 아밀리미터파로 발전하여 센티미터파와 레이저파의 공백을 메웠다.
+                                2.   전자파 회로의 소형화, 단편 집적화 방향의 발전, 그리고 MMIC의 광범위한 응용을 연구중이다.
+                                3.	 더 많은, 갱신된 마이크로 블로그 응용 분야의 방향을 개척하고 있다.
+                                
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

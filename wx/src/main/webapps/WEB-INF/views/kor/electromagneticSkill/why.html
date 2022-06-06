@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전자파 학습소</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+    
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p>中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p>Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >홈</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p> 전자파</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a>전자파란?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>특성과 응용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p  class="text-active">전자파기술</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">전자파기술이란?</a></li>
+                  
+                                    <li class="sub-active" onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">왜 공부해야 할까?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">전자파기술의 발전과정</a></li>
+                  
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>안테나</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">안테나란?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">안테나의 종류</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>왜 공부해야 할까?</h1>
+                        <img src="../../../../resources/assets/why.jpg" alt="">
+                        <h3>왜 전자파기술을 공부해야 할까? 전자파 기술을 배우면 무슨 소용이 있을까? 이것은 보통 초보자들이 매우 관심을 가지는 문제다. 대부분의 실용 무선 통신 시스템은 마이크로웨이브에서 작동하기 때문에 그 정보 전송은 틀림없이'도선'과 떨어질 수 없다.  마이크로웨이브 기술 과정의 중요한 내용 중 하나는   마이크로웨이브에 적용되는 각양각색의'도선'을 배우는 것이다.   상술한 몇 가지 문제는 모두 통신 시스템에서 정보 전송의 기본적인 문제로   모든 전자 정보류와 통신 공학 관련 전공의 종사자들이 숙지하고 파악해야 할 기초 지식이다.
+                        </h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微波学堂</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#antenna-text");
+            setInterval(function() { 
+                $text.addClass("antenna-text-action");
+            }, 500);
+        }
+
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" class="text-active">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >首页</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>微波</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">什么是微波?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>特点和应用</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>微波技术</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">什么是微波技术?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">为什么要学习微波技术？</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">微波技术的发展过程</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p >天线</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">什么是天线?</a></li>
+                                <li class="sub-active" onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">天线的种类</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+                <div id="ex1-1" class="modal">
+                    <p class="title">吸顶天线</p>
+                    <p class="text">吸顶天线一般用于室内无线覆盖场景，根据其不同的辐射形式，可以分为定向吸顶天线和全向吸顶天线，全向吸顶天线又可分为单极化吸顶与双极化吸顶两种。</p>
+                </div>
+                <div id="ex1-2" class="modal">
+                    <p class="title">壁挂天线</p>
+                    <p class="text">室内壁挂天线是典型的小型板状天线产品，主要用于室内无线覆盖场景，根据极化方式的不</p>
+                </div>
+                <div id="ex1-3" class="modal">
+                    <p class="title">八木天线</p>
+                    <p class="text">八木天线主要用于链路传输和中继器，成本比较低，在二维平面的前后反射比比较好。</p>
+                </div>
+                <div id="ex1-4" class="modal">
+                    <p class="title">对数周期天线</p>
+                    <p class="text">对数周期天线与八木天线相似，是多元素双向天线，具有宽频带覆盖能力，主要用于链路中继。</p>
+                </div>
+                <div id="ex1-5" class="modal">
+                    <p class="title">抛物面天线</p>
+                    <p class="text">抛物面天线是高增益双向天线，由抛物面反射器和中心馈天线组成。</p>
+                </div>
+                <div id="ex2-1" class="modal">
+                    <p class="title">全向基站 </p>
+                    <p class="text">全向基站天线主要用于360度广覆盖，主要用于覆盖稀疏的农村无线场景。</p>
+                </div>
+                <div id="ex2-2" class="modal">
+                    <p class="title">定向基站天线</p>
+                    <p class="text">: 定向基站天线是目前应用最广泛的全封闭基站天线，分为多个种类，主要包括：垂直极化天线，垂直和水平极化天线，±45°双极化天线，多频带天线等。根据倾角电调方式的不同又可以分为固定倾角天线，电调天线，同时还包括三扇区集束天线。</p>
+                </div>
+                <div id="ex2-3" class="modal">
+                    <p class="title"> 电调基站天线 </p>
+                    <p class="text">: 电调天线是指通过移相单元改变阵列中不同辐射单元的相位差，从而产生不同辐射主瓣下倾状态，通常电调天线的下倾状态仅在一定的可调角度范围内。电调下倾调整有手动调节和RCU电调节。</p>
+                </div>
+                <div id="ex2-4" class="modal">
+                    <p class="title">智能天线</p>
+                    <p class="text">采用双极化辐射单元，组成定向或全向阵列，可以在360度或特定方向内进行波束扫面的天线阵列；智能天线可以判定信号的空间信息（比如传播方向）和跟踪、定位信号源的智能算法，并且可以根据此信息，进行空域滤波的天线阵列。</p>
+                </div>
+                <div id="ex2-5" class="modal">
+                    <p class="title">多模天线</p>
+                    <p class="text">多模基站天线产品相对于普通的基站天线主要区别在于在有限的空间内集成两个以上的不同频段的天线，因此，该产品的重点在于消除不同频段之间的相互影响（去耦合效应、隔离度、近场干扰）</p>
+                </div>
+                <div id="ex2-6" class="modal">
+                    <p class="title">多波束天线</p>
+                    <p class="text">多波束天线能产生多个锐波束的天线。这些锐波束（称为元波束）可以合成一个或几个成形波束，以覆盖特定的空域。多波束天线有透镜式、反射面式和相控阵式等三种基本形式。</p>
+                </div>
+                <div id="ex3-1" class="modal">
+                    <p class="title">室内覆盖美化天线</p>
+                    <p class="text">对不同的室内分布式天线产品进行美化加工，其既解决了室内信号覆盖的问题，又不会破坏整理装修的布局；一般室内覆盖美化天线外形美观小巧，隐形效果好，适用于各高档小区、商场、宾馆、酒店、写字楼、医院等公共场所。  室内覆盖美化天线根据产品的形态，大致可以分为：吸顶灯型美化天线、壁画型美化天线及排气扇型等等。
+                    </p>
+                </div>
+                <div id="ex3-2" class="modal">
+                    <p class="title"> 室外覆盖美化天线</p>
+                    <p class="text">室外覆盖美化天线主要针对小区和基站等天线应用产品，在不增大传播损耗的情况下，通过各种材料、结构、图案的应用，对天线的外观进行伪装和修饰，其既美化了城市视觉环境，也减少了公众对无线电磁环境的恐惧和抵触情绪，同时又可以延长天线的使用寿命，保证通讯质量。 室外覆盖美化天线根据产品的形态，大致可以分为：路灯型美化天线、标识牌型美化天线、监控球型美化天线、空调型美化天线、假山型美化天线、音箱型美化天线、仿真树型美化天线、方柱型美化天线、变色龙型美化天线、水塔型美化天线、围栏型美化天线、排气管型美化天线等等。</p>
+                </div>
+                <div id="ex4-1" class="modal">
+                    <p class="title">RF馈电电缆</p>
+                    <p class="text">RF馈线电缆可以分为半柔性同轴电缆和半刚性同轴电缆；根据其型号的不同，可以分为1/4″、3/8″、1/2″、5/8″、7/8″、1-1/4″、1-5/8″等不同尺寸型号，这些主要用于室内外射频信号的传输。 移动通信天线内部的射频电缆亦为RF馈电电缆，其主要用于跳线接头馈电、功分网络馈电、网络阻抗匹配等。</p>
+                </div>
+                <div id="ex4-2" class="modal">
+                    <p class="title">合路器分路器</p>
+                    <p class="text">合路器主要用作将多系统信号合路到一套室内分布系统。在工程应用中，采用合路器可使一套室内分布系统同时工作于不同制式的通信频段。移动通信系统使用的合路器一般有双路合路器、三路合路器、四路合路器等等。</p>
+                </div>
+                <div id="ex4-3" class="modal">
+                    <p class="title">滤波器</p>
+                    <p class="text">滤波器的功能就是允许需要部分频率的信号顺利的通过，而其他部分频率的信号则受到较大的抑制，滤波器一般分为有源滤波器和无源滤波器。移动通信系统中使用的一般为无源滤波器中的腔体滤波器，其主要特点为：频率覆盖范围宽，可靠性高，稳定性好，输入输出阻抗匹配，易于级联使用，带内幅频特性平坦、插入损耗小、带外抑制度高等。</p>
+                </div>
+            <div class="cnt antenna-section antenna-section01-wrapper">
+                <div class="antenna-section01-form" id="antenna-form">
+                    <div class="antenna antenna-section01" id="antenna-text">
+                        <h1>天线的种类</h1>
+                        <h3>移动通信天线产品种类众多、型号各异，根据其应用场景的不同，大致可以分为室内分布式天线产品、室外基站天线产品、美化天线产品。
+                        </h3>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">室内分布式及小区覆盖天线产品</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex1-1" rel="modal:open"><img src="../../../../resources/assets/1.1.png" alt=""/></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-2" rel="modal:open"><img src="../../../../resources/assets/1.2.png" alt=""/></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-3" rel="modal:open"><img src="../../../../resources/assets/1.3.png" alt=""/></a>
+
+                            </p>
+                        </div>
+                       <div class="section">
+                            <p>
+                                <a a href="#ex1-4" rel="modal:open"><img src="../../../../resources/assets/1.4.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-5" rel="modal:open"><img src="../../../../resources/assets/1.5.png" alt=""></a>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">室外基站天线产品</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex2-1" rel="modal:open"><img src="../../../../resources/assets/2.1.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-2" rel="modal:open"><img src="../../../../resources/assets/2.2.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-3" rel="modal:open"><img src="../../../../resources/assets/2.3.png" alt=""></a>
+                            </p>
+                        </div>
+                       <div class="section">
+                            <p>
+                                <a a href="#ex2-4" rel="modal:open"><img src="../../../../resources/assets/2.4.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-5" rel="modal:open"><img src="../../../../resources/assets/2.5.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-6" rel="modal:open"><img src="../../../../resources/assets/2.6.png" alt=""></a>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">美化天线</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex3-1" rel="modal:open"><img src="../../../../resources/assets/3.1.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex3-2" rel="modal:open"><img src="../../../../resources/assets/3.2.png" alt=""></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">移动通信馈线无源器件及其他</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex4-1" rel="modal:open"><img src="../../../../resources/assets/4.1.jpg" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex4-2" rel="modal:open"><img src="../../../../resources/assets/4.2.jpg" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex4-3" rel="modal:open"><img src="../../../../resources/assets/4.3.jpg" alt=""></a>
+                            </p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

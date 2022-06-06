@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微波学堂</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section02Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+         let section02Event=function(){
+             let $text = $("#elec02-text");
+             setInterval(function() {
+                 $text.addClass("elec02-text-action")
+             }, 300);
+      
+         }
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" class="text-active">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >首页</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p class="text-active">微波</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">什么是微波?</a></li>
+                  
+                                <li class="sub-active" onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>特点和应用</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>微波技术</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">什么是微波技术?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">为什么要学习微波技术？</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">微波技术的发展过程</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>天线</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">什么是天线?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">天线的种类</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+
+            <div class="cnt elec-section elec-section02-wrapper">
+                <div class="elec-section02-form" id="elec02-form">
+                  
+                    <div class="elec elec-section02" id="elec02-text">
+                        <h1>特点和应用</h1>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec01.jpg" alt="">
+                            <h3>
+                                无论看我们生活的周围哪里，都有很多与电和电波有关的东西。近年来，随着社会、经济活动与信息化相结合，对传播利用领域的需求越来越多。特别是以电波为媒介的无线通信，克服了时间和距离，可以即时传递信息的特性，在信息社会成为重要的生活和生产基础。
+                            </h3>
+                        </div>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec02.jpg" alt="">
+                            <h3>
+                                人类日常生活最普通的传播利用是广播领域。通过中波、短波、FM、电视、卫星，向包括家庭、工作场所在内的所有场所提供教养、娱乐、音乐、经济等多彩的内容，通过语音和视频润泽我们的生活。除了通信、广播以外，在社会上重要的国家组织、急救、消防、警察、防控等公共机构和医疗、海上交通、陆上运输领域的许多公益团体中，传播也作为信息传递手段发挥着重要作用。
+                            </h3>
+                        </div>
+                        <div class="text-area">
+                            <img src="../../../../resources/assets/elec03.jpg" alt="">
+                            <h3>
+                                在医疗领域，对骨折、神经痛、癌症等的治疗也越来越多地使用微波。另外，高频加热装置、M/W电力传输等能源领域、遥感、观测、计量等也在利用电波。电波被用于木材、塑料、造纸工艺的干燥或加热，也被用于综合交通信息系统、速度测量、雷达（跟踪、探索、气象等）、射电天文学领域。无线识别装置、远程控制装置、安全系统、应急救援系统等也在使用无线仪器。
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

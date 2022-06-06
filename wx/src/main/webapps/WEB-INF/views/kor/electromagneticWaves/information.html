@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>디에뜨</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+    
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >홈</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p class="text-active"> 전자파</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li class="sub-active" onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">전자파란?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>특성과 응용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>전자파기술</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">전자파기술이란?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">왜 공부해야 할까?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">전자파기술의 발전과정</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>안테나</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">안테나란?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">안테나의 종류</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>전자파란?</h1>
+                        <img src="../../../../resources/assets/elec-waves-background.jpg" alt="">
+                        <h3>단일 주파수 전자파의 주파수를f, 주기를T라 하고, 진공상태에서 전자파의 속도가 광속인 c = 3 × 10^8 m/s 라고 한다면, 그럼 이 공간에서의 파장은 λ=cT=c/f 라고 할수 있다. （0 – 1 – 1）일반적으로 주파수가 300MHz ~ 3000GHz인 전자파를 마이크로파라고 하는데,근거식(0-1-1)으로 계산하면 대응하는 자유공간의 파장은 1m ~ 0.1mm이다. 마이크로파는 주파수가 높고 파장이 짧기 때문에 마이크로파라고 하는데,마이크로파의”마이크로”는 그 파장에 대한 말이다.다른 한편 “마이크로”는 또 하나의 상대적인 개념으로 주로 자연계의 인체, 일반적인 회로,일반 장애물의 사이즈를 가리키는데 마이크로파의 파장은 정말 작은것이다.마이크로파도 일종의 전자파이기 때문에, 이전에 전자장이론 과정에서 배운 전자파에 대한 지식도 마이크로파에 적용된다.마이크로파기술과정은 전자장이론 과정을 바탕으로 전자파에관한 지식을 계속 배울 것이다.전자파 파단은 구체적으로 구분할 수 있다. 분미터파, 센티미터파, 밀리미터파, 아밀리미터파로 나눌 수 있으며,마이크로파 주파수는 미터파(초단파 또는 매우 높은 주파수)와 원적외파 사이에 있다.
+                        </h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

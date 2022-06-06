@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微波学堂</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            sliderEvent();
+            headerEvent();
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#elec01-text");
+            setInterval(function() { 
+                $text.addClass("elec01-text-action");
+            }, 500);
+        }
+        let sliderEvent=function(){
+            let $text = $("#slider");
+            setInterval(function() { 
+                $text.addClass("slider-action");
+            }, 1000);
+        }
+    scroll();
+</script>
+<script>
+    $(function(){
+      $('.slider').slick({
+        slide: 'div',   //슬라이드 되어야 할 태그 ex) div, li
+        infinite : false,  //무한 반복 옵션  
+        slidesToShow : 1,   // 한 화면에 보여질 컨텐츠 개수
+        slidesToScroll : 1,   //스크롤 한번에 움직일 컨텐츠 개수
+        speed : 100,   // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+        arrows : false,    // 옆으로 이동하는 화살표 표시 여부
+        dots : true,    // 스크롤바 아래 점으로 페이지네이션 여부
+        autoplay : false,      // 자동 스크롤 사용 여부
+        autoplaySpeed : 10000,    // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+        pauseOnHover : true,    // 슬라이드 이동  시 마우스 호버하면 슬라이더 멈추게 설정
+        vertical : false,   // 세로 방향 슬라이드 옵션
+        dotsClass : "slick-dots",   //아래 나오는 페이지네이션(점) css class 지정
+        draggable : true,   //드래그 가능 여부  
+      });
+    })
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" class="text-active">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../kor/main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >首页</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p>微波</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">什么是微波?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>特点和应用</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="text-active">微波技术</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">什么是微波技术?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">为什么要学习微波技术？</a></li>
+                  
+                                    <li class="sub-active" onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">微波技术的发展过程</a></li>
+                            </ul> 
+                        </li>
+                        <li>
+                            <p>天线</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">什么是天线?</a></li>
+                                <li onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">天线的种类</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="cnt elec-section elec-section01-wrapper">
+                <div class="elec-section01-form" id="elec01-form">
+                    <div class="elec elec-section01" id="elec01-text">
+                        <h1>微波技术的发展过程</h1>
+                        <h3>微波技术发展的历史可以追溯到20世纪初乃至19世纪末。在第二次世界大战中，雷达的研制加速了微波技术的发展，是其称为一门独立的学科。微波技术的发展经历了一下几个重要阶段。
+
+                        </h3>
+                    </div>
+                </div>
+                <div class="slider" id="slider">
+                    <div class="slider-info-form">
+                        <img src="../../../../resources/assets/skill-profile01.jpg" alt="">
+                        <div class="slider-text-area">
+                            <span class="slider-title">第一阶段：1940年前。</span>
+                            <h3 class="slider-text">1888年，德国的物理学家赫兹通过实验验证了电磁波的存在。这通常被认为是宏观电磁场理论体系完备建立的标志。 1936年，美国贝尔研究所的研究人员通过实验证明空心金属管可以传输微波功率。这可以看作是近代微波技术产生的标志。 在此阶段，科学家发明了若干形式的微波电子管，是推动微波技术向前发展的决定性因素。在此阶段还开展了波导，空腔谐振器、微波电子管中电磁场和运动电荷相互作用等方面的理论研究，为微波技术的进一步发展奠定了理论基础。
+                                
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="slider-info-form">
+                        <img src="../../../../resources/assets/skill-profile02.jpg" alt="">
+                        <div class="slider-text-area">
+                            <span class="slider-title">第二阶段：1940年～1945年。</span>
+                            <h3 class="slider-text">此阶段正处于第二次世界大战时期，研究的焦点是将雷达应用于军事。在美国，麻省理工学院（MIT）建立了著名的辐射实验室来发展雷达的理论和技术，很多著名的科学家在一起，把微波领域研究推进到一个迅猛发展的时期
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="slider-info-form">
+                        <div class="slider-text-area">
+                            <span class="slider-title">第三阶段：约1945年以后。</span>
+                            <h3 class="slider-text">
+                                ①1944年至今，微波波普学和量子学的大发展。
+                                ②1946～1971年，射电天文学的大发展。
+                                ③1947年至今，微波能利用及微波医学的发展。
+                                ④1964年成立国际通信卫星组织。
+                                ⑤1965年以后，微波电路得一向固体化、小型化发展。
+                            </h3>
+                        </div>
+                        <div class="slider-text-area">
+                            <span class="slider-title">现在</span>
+                            <h3 class="slider-text">
+                                1.向更高频率和更短波长过渡，即向毫米波和亚毫米波发展，以弥补厘米波段和激光波段的空白。
+                                2.想微波电路的小型化、单片集成化方向发展，以及MMIC更广泛的应用。
+                                3.想开辟更多、更新的微博应用领域方向发展。
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

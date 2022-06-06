@@ -1,0 +1,21 @@
+
+html{
+
+    box-sizing: border-box;
+    font-size:12px;
+}
+body{
+    background-color:#f7f7f7;
+}
+.page-wrapper {
+
+    width:100%;
+    white-space: normal;
+    overflow: auto;
+    height:calc(100%-100px)
+}
+.sub-active{
+    color:yellow !important;
+    background-color: #eee;
+    font-weight: bolder;
+}

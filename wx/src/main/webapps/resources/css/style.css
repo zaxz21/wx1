@@ -1,0 +1,10 @@
+
+@import url('./screen/main.css');
+@import url('./screen/electromagneticWaves.css');
+@import url('./screen/electromagneticSkill.css');
+@import url('./screen/antenna.css');
+@import url('variables.css');
+@import url('reset.css');
+@import url('./components/sideNav.css')
+
+

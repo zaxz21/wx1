@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전자파 학습소</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../../../../resources/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../../resources/assets/favicon.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    </head>
+    <script>
+    
+    // $(document).readey(function(){
+        
+    // })
+
+    let scroll = function(){
+        $(document).ready(function(){
+            navEvent();
+            section01Event();
+            headerEvent();
+
+        });
+        
+        let init = function(){
+            $nav = $(".side-nav a");
+        };
+        let navEvent = function(){
+            let $start = $("#side-nav");
+            $start.addClass("start");
+            console.log("dds")
+        };
+ 
+    };
+    let headerEvent = function(){
+            $(".nav-button>li").mouseover(function(){
+                $(this).children(".sub").stop().slideDown(200);
+            });
+            $(".nav-button>li").mouseleave(function(){
+                $(this).children(".sub").stop().slideUp(200);
+            });
+        }
+        let section01Event=function(){
+            let $text = $("#antenna-text");
+            setInterval(function() { 
+                $text.addClass("antenna-text-action");
+            }, 500);
+        }
+
+    scroll();
+</script>
+    <body>
+        <div class="side-nav sub-menu " id ='side-nav'>
+            <img src="../../../../resources/assets/logo.png"/>
+                <div class="nav-form">
+                    <ul class="lenguage-area">
+                        <li>
+                            <p onclick="window.location.href='../../china/main.html'">中</p><span>|</span>
+                        </li>
+                        <li>
+                            <p class="text-active" onclick="window.location.href='../main.html'">한</p><span>|</span>
+                        </li>
+                        <li>
+                            <p onclick="window.location.href='../../eng/main.html'">Eng</p>
+                        </li>
+                    </ul>
+                    <ul class="nav-button">
+                        <li>
+                            <p onclick="window.location.href='../main.html'" >홈</p><span>|</span>
+                        </li>                 
+                        <li>
+                            <p> 전자파</p><span>|</span>
+                            <ul class="sub sub1">
+                                <li onclick="window.location.href=`../electromagneticWaves/information.html`"><a href="#">전자파란?</a></li>
+                  
+                                <li onclick="window.location.href=`../electromagneticWaves/characteristic.html`"><a>특성과 응용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>전자파기술</p><span>|</span>
+                            <ul class="sub sub2">
+                                    <li onclick="window.location.href='../electromagneticSkill/information.html'"><a href="#">전자파기술이란?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/why.html'"><a href="#">왜 공부해야 할까?</a></li>
+                  
+                                    <li onclick="window.location.href='../electromagneticSkill/history.html'"><a href="#">전자파기술의 발전과정</a></li>
+                  
+                            </ul> 
+                        </li>
+                        <li>
+                            <p  class="text-active">안테나</p>
+                            <ul class="sub sub3">
+                                <li onclick="window.location.href='../antenna/information.html'"><a href="#">안테나란?</a></li>
+                                <li class="sub-active" onclick="window.location.href='../antenna/antennaKind.html'"><a href="#">안테나의 종류</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="page-wrapper">
+                <div id="ex1-1" class="modal">
+                    <p class="title">천장 안테나</p>
+                    <p class="text">천장 안테나는 일반적으로 실내 무선 커버리지 시나리오에서 사용되며, 방상 형태에 따라 지향성 천장 안테나와 무지향성 천장 안테나로 나눌 수 있다. 천장 안테나는 크게 나눌 수 있다. 단극 천장과 이중 편극 천장으로 나뉜다. </p>
+                </div>
+                <div id="ex1-2" class="modal">
+                    <p class="title">벽걸이 안테나 </p>
+                    <p class="text">실내 벽걸이 안테나는 실내 무선 커버리지 시나리오에서 주로 사용되는 전형적인 소형 판형 안테나 제품으로 다른 편파 모드에 따라 단극 벽걸이와 이중 편파로 나눌 수 있다. </p>
+                </div>
+                <div id="ex1-3" class="modal">
+                    <p class="title">야기 안테나  </p>
+                    <p class="text">야기 안테나는 주로 링크 전송 및 중계기에 사용되며 비용이 상대적으로 낮고 2차원 평면의 전면 및 후면 반사율이 상대적으로 좋다.</p>
+                </div>
+                <div id="ex1-4" class="modal">
+                    <p class="title">대수주기안테나 </p>
+                    <p class="text">야기안테나와 마찬가지로 대수주기 안테나는 광대역 커버리지 기능을 가진 다중 요소 양방향 안테나이며 주로 링크 중계에 사용된다.</p>
+                </div>
+                <div id="ex1-5" class="modal">
+                    <p class="title">포물선안테나 </p>
+                    <p class="text">포물선 안테나는 포물선 반사경과 중앙 급전 안테나로 구성된 고이득 양방향 안테나이다.</p>
+                </div>
+                <div id="ex2-1" class="modal">
+                    <p class="title">무지향성안테나 </p>
+                    <p class="text">무지향성안테나는 주로 360가 넓은 범위에 사용되며, 주로 시골등 전파가 희박한 곳에서 주로 사용된다.</p>
+                </div>
+                <div id="ex2-2" class="modal">
+                    <p class="title">지향성안테나 </p>
+                    <p class="text">: 지향성안테나는 현재 가장 널리 사용되는 완전 밀폐형 기지국안테나등이다. 경사각 조정의 다양한 방법에 따라 고정경사안테나, 전기조정안테나 및 3섹터 클러스터 안테나로 나눌 수 있다.</p>
+                </div>
+                <div id="ex2-3" class="modal">
+                    <p class="title">ESC기지국 안테나  </p>
+                    <p class="text">: ESC안테나는 위상 변이 장치를 통해 어레이의 서로 다른 방사요소의 위상차를 변경하여 서로 다른 방사 메인 로브 다운틸트상태를 생성하는 것을 말하며 일반적으로 전자 변조 안테나의 다운틸트 상태는 특정 조정 가능한 각도 범위 내에서만 발생한다. ESC하향 조정을 위한 수동 조정 및 RCU전기 조정이 있다.</p>
+                </div>
+                <div id="ex2-4" class="modal">
+                    <p class="title">스마트 안테나  </p>
+                    <p class="text">스마트 안테나는 360도 또는 특정방향으로 전파를 스캔할 수 있는 지향성 또는 무지향성을 형성하기 위해 이중 편파 방사장치를 사용한다. 스마트 안테나는 신호의 공간정보를 결정할 수 있다. 그리고 신호 소스를 찾고 정보를 기반으로 공간필터링을 수행하는 안테나를 찾는 지능형 알고리즘을 사용한다.</p>
+                </div>
+                <div id="ex2-5" class="modal">
+                    <p class="title">다중모드안테나 </p>
+                    <p class="text">다중모드안테나 제품과 일반기지국안테나의 주요차이점은 제한된 공간에 서로 다른 주파수 대역의 두개 이상의 안테나를 통합한다는 것이다. 따라서 이 제품의 초점은 서로 다른 안테나 사이의 상호영향을 제거하는 것이다.</p>
+                </div>
+                <div id="ex2-6" class="modal">
+                    <p class="title">다중 빔 안테나  </p>
+                    <p class="text">다중 빔 안테나는 여러개의 날카로운 빔을 생성할 수 있다. 이러한 날카로운 빔(메타빔이라고함)은 특정공간을 덮기 위해 하나 또는 여러 모양의 빔으로 결합될 수 있다. 다중빔안테나에는 렌즈유형, 반사경 유형 및 위상 배열 유형의 세가지 기본 유형이 있다.</p>
+                </div>
+                <div id="ex3-1" class="modal">
+                    <p class="title">실내용 매립안테나</p>
+                    <p class="text">다양한 실내분산안테나 제품을 디자인적요소를 가미하여 실내 신호의 간섭도 받지 않으며 인테리어 레이아웃을 파괴하지 않는다. 일반적인 가정용 보다는, 각종 고급 쇼핑몰, 호텔, 오피스빌딩, 병원등 공공장소에 적합하다.</p>
+                </div>
+                <div id="ex3-2" class="modal">
+                    <p class="title">실외용 디자인안테나</p>
+                    <p class="text">실외용 디자인안테나는 주로 기지국과 같은 안테나 응용제품을 대상으로 하며 전파 손실을 증가시키지 않고 다양한 재료, 구조 및 패턴의 적용을 통해 안테나의 외관을 위장 및 수정함으로써 미화될 뿐만 아니라 도시의 미관도 해치지 않는다. 또한 미화됨으로써 시민들의 전자기 환경에 대한 두려움과 반발을 감소시키고, 안테나의 서비스 수명을 연장하고 통신품질도 보장할 수 있다. 크게 가로등형, 간판형, 스피커형 등등 많은 종류가 있다. </p>
+                </div>
+                <div id="ex4-1" class="modal">
+                    <p class="title">RF피더 케이블  </p>
+                    <p class="text">RF피더 케이블은 반 유연한 동축 케이블과 반 강성 동축케이블로 나눌 수 있다. 이들은 주로 실내외 RF신호 전송에 사용되며 이동 통신 안테나 내부의 RF케이블은 RF피더 케이블이기도 하면 주로 점퍼 커넥터 급전, 전력분배네트워크, 네트워크 임피던스 매칭등에 사용된다.</p>
+                </div>
+                <div id="ex4-2" class="modal">
+                    <p class="title">분배기 결합기 </p>
+                    <p class="text">주로 다중 시스템 신호를 실내 분배 시스템세트로 결합하는 데 사용된다. 엔지니어링 응용 프로그램에서 결합기를 사용하면 실내 분배 시스템 세트가 다른 통신 주파수 대역에서 동시에 작동하도록 할 수 있다. 결합기 사용 이동 통신 시스템에서 일반적으로 양방향 결합기, 3방향, 4방향 결합기가 포함된다.</p>
+                </div>
+                <div id="ex4-3" class="modal">
+                    <p class="title">필터</p>
+                    <p class="text">필터의 기능은 일부 주파수의 신호는 원활하게 통과하고 다른 주파수의 신호는 통과되지 못 하도록 하는 것이다. 필터는 일반적으로 능동 필터와 수동 필터로 나뉜다.</p>
+                </div>
+            <div class="cnt antenna-section antenna-section01-wrapper">
+                <div class="antenna-section01-form" id="antenna-form">
+                    <div class="antenna antenna-section01" id="antenna-text">
+                        <h1>안테나의 종류</h1>
+                        <h3>안테나는 제품의 종류도 다양하고 모델도 다양해서, 장소와 목적에따라 실내분산안테나, 실외 기지국 안테나, 디자인요소가 들어간 안테나 등으로 나뉜다.
+                        </h3>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">실내분산형</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex1-1" rel="modal:open"><img src="../../../../resources/assets/1.1.png" alt=""/></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-2" rel="modal:open"><img src="../../../../resources/assets/1.2.png" alt=""/></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-3" rel="modal:open"><img src="../../../../resources/assets/1.3.png" alt=""/></a>
+
+                            </p>
+                        </div>
+                       <div class="section">
+                            <p>
+                                <a a href="#ex1-4" rel="modal:open"><img src="../../../../resources/assets/1.4.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex1-5" rel="modal:open"><img src="../../../../resources/assets/1.5.png" alt=""></a>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">실외기지국형</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex2-1" rel="modal:open"><img src="../../../../resources/assets/2.1.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-2" rel="modal:open"><img src="../../../../resources/assets/2.2.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-3" rel="modal:open"><img src="../../../../resources/assets/2.3.png" alt=""></a>
+                            </p>
+                        </div>
+                       <div class="section">
+                            <p>
+                                <a a href="#ex2-4" rel="modal:open"><img src="../../../../resources/assets/2.4.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-5" rel="modal:open"><img src="../../../../resources/assets/2.5.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex2-6" rel="modal:open"><img src="../../../../resources/assets/2.6.png" alt=""></a>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">디자인안테나</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex3-1" rel="modal:open"><img src="../../../../resources/assets/3.1.png" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex3-2" rel="modal:open"><img src="../../../../resources/assets/3.2.png" alt=""></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="antenna-border">
+                        <p class="title">그 외의 부품</p>
+                        <div class="section"> 
+                            <p>
+                                <a a href="#ex4-1" rel="modal:open"><img src="../../../../resources/assets/4.1.jpg" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex4-2" rel="modal:open"><img src="../../../../resources/assets/4.2.jpg" alt=""></a>
+                            </p>
+                            <p>
+                                <a a href="#ex4-3" rel="modal:open"><img src="../../../../resources/assets/4.3.jpg" alt=""></a>
+                            </p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

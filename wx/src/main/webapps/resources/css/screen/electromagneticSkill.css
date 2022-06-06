@@ -1,0 +1,57 @@
+
+.page-wrapper .skill-section03 h1{
+    padding-top:3rem;
+}
+.page-wrapper .skill-section03 h3{
+    font-size:20px;
+    line-height: 46px;
+    min-width:1100px;
+    font-weight: normal;
+    padding-bottom:3rem;
+    text-align: center;
+}
+.page-wrapper .slider{
+    height:0px;
+    overflow: hidden;
+}
+.page-wrapper .slider-action{
+    height: 2200px;
+    transition: all 0.7s ease-out;
+}
+.page-wrapper .slider .slider-info-form{
+    text-align: center;
+    padding:120px 0;
+}
+.page-wrapper .slider img{
+    width:200px;
+    height:200px;
+    margin:auto;
+
+}
+.page-wrapper .slider{
+    margin-top:50px;
+}
+.page-wrapper .slider .slider-info-form h3{
+    text-align: left;
+    max-width: 600px;
+    margin:auto;
+    font-weight: normal;
+    padding-top:30px;
+}
+.page-wrapper .slider-text-area{
+    text-align: center;
+}
+.page-wrapper .slider .slider-info-form span{
+
+    font-size:20px;
+    font-weight: bold;
+}
+.page-wrapper .skill-section03-form .slider .slick-dots .slick-active button::before{
+   color:#000000;
+}
+.page-wrapper .skill-section03-form .slider .slick-dots li button::before{
+    color:#333333;
+ }
+ .page-wrapper .slick-dots{
+     bottom :119px;
+ }
